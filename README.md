@@ -17,3 +17,9 @@ To use this application, select an image file using the file input. The selected
 The compression options can be adjusted in the handleImageUpload function in App.js. The current options are set to use a web worker for the compression if available, perform a maximum of 10 iterations for compressing the image, and set the initial quality to 0.1.
 
 ```
+
+## Original Image
+<img src="./sample-images/original-image.jpg?raw=true" width="256">
+
+## Compressed Image
+<img src="./sample-images/compressed-image.jpeg?raw=true" width="256">
