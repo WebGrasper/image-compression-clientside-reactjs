@@ -3,6 +3,7 @@ import React from "react";
 import { saveAs } from "file-saver";
 /* Image compression package */
 import imageCompression from "browser-image-compression";
+import "./styles.css";
 
 export default function App() {
   /* Handling image compression */
@@ -20,7 +21,7 @@ export default function App() {
       exifOrientation: 1,
       /* Control quality of compressed image, now it is set to 50% */
 
-      initialQuality: 0.5
+      initialQuality: 0.5,
     };
 
     try {
@@ -37,8 +38,12 @@ export default function App() {
   }
 
   return (
-    <div>
-      <input type="file" accept="image/*" onChange={handleImageUpload} />
+    <div className="main_container">
+      <label for="images" class="drop-container" id="dropcontainer">
+        <span class="drop-title">Drop files here</span>
+           or
+        <input type="file" id="images" accept="image/*" onChange={handleImageUpload} required/>
+      </label>
     </div>
   );
 }
